@@ -28,8 +28,8 @@ def estaEnLista(usuarios):
         Pass = input("Escriba su password: ")
         intentos=intentos+1
         if User in usuarios and Pass == usuarios[User]['password']:
-            print(usuarios[User]['nombre'])
-            print(usuarios[User]['apellido'])
+            print("El nombre del usuario es:",usuarios[User]['nombre'])
+            print("El apellido del usuario es:",usuarios[User]['apellido'])
             break
         else:
             print("Usuario y/o contraseña no encontrados.")
