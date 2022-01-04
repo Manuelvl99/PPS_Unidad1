@@ -1,36 +1,10 @@
-'''Realiza, utilizando Python 3, el ejercicio 3 de la página 35 del libro “Introducción a
-Python” de Jon Vadillo e inclúyelo en un fichero llamado lista.py. Las funciones que
-debes usar en el ejercicio 3 deben utilizar OBLIGATORIAMENTE las siguientes
-cabeceras'''
+'''Crea un programa que reciba un número del 1 al 20 introducido por el usuario y compruebe si está
+dentro de la siguiente lista: [6,14,11,3,2,1,15,19]. Implementa una función que se asegure que el
+número introducido por el usuario está en el rango indicado y otra que compruebe si está dentro
+de la lista. Trata de crear las funciones de forma que puedan ser reutilizadas lo máximo posible en
+otros programas.'''
 
-usuarios = {
-        "iperurena": {
-            "nombre": "Iñaki",
-            "apellido": "Perurena",
-            "password": "123123"
-    },
-        "fmuguruza": {
-            "nombre": "Fermín",
-            "apellido": "Muguruza",
-            "password": "654321"
-    },
-        "manuelvl": {
-            "nombre": "Aimar",
-            "apellido": "Olaizola",
-            "password": "hola22"
-    }
- }
-
-def estaEnLista(usuarios):
-    intentos=0
-    while intentos<3:
-        User = input("Escriba su usuario: ")
-        Pass = input("Escriba su password: ")
-        intentos=intentos+1
-        if User in usuarios and Pass == usuarios[User]['password']:
-            print("El nombre del usuario es:",usuarios[User]['nombre'])
-            print("El apellido del usuario es:",usuarios[User]['apellido'])
-            break
-        else:
-            print("Usuario y/o contraseña no encontrados.")
-print(estaEnLista(usuarios))
+lista=(6,14,11,3,2,1,15,19)
+n=int(input("Escriba el número a buscar: "))
+busqueda=lista.index(n)
+print("La posición del valor es:",busqueda)
