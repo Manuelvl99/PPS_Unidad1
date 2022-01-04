@@ -3,8 +3,9 @@ dentro de la siguiente lista: [6,14,11,3,2,1,15,19]. Implementa una función que
 número introducido por el usuario está en el rango indicado y otra que compruebe si está dentro
 de la lista. Trata de crear las funciones de forma que puedan ser reutilizadas lo máximo posible en
 otros programas.'''
-
 lista=(6,14,11,3,2,1,15,19)
-n=int(input("Escriba el número a buscar: "))
-busqueda=lista.index(n)
-print("La posición del valor es:",busqueda)
+def estaEnLista():
+    n=int(input("Escriba el número a buscar: "))
+    c=n in lista
+    return c  
+print(estaEnLista())
