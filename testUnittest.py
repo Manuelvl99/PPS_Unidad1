@@ -1,7 +1,33 @@
+'''Crea una suite de tests mediante UnitTest que comprueben las 3 funciones que has
+desarrollado en los ejercicios anteriores. Procura que los tests unitarios cubran lo
+mejor posible la aparición de comportamientos no deseados.'''
+
 import unittest
+
+from binario import esBinario, convertirBinario
 from lista import estaEnRango, estaEnLista
 
 class Tests(unittest.TestCase):
+
+    def testEsBinario(self):
+
+        self.assertEqual(esBinario('1010'), True)
+
+        self.assertEqual(esBinario('2022'), False)
+
+        self.assertEqual(esBinario('Susto'), False)
+
+        self.assertRaises(ValueError, esBinario)
+    
+    def testConvertirBinario(self):
+
+        self.assertEqual(convertirBinario('1010'), 5)
+
+        self.assertRaises(ValueError, convertirBinario, '2022')
+
+        self.assertRaises(ValueError, convertirBinario, 'Susto')
+
+        self.assertRaises(ValueError, convertirBinario)
 
     def testEstaEnRango(self):
 
